@@ -35,7 +35,7 @@ public class EtatDecision implements State {
     @Override
     public void execute(LifeCycle c) {
 
-        Message m = new Message(agt.getInfraAgentID(), null);
+        MonMessage m = new MonMessage(agt.getInfraAgentID(), null);
         if (communication != null) {
             communication.sendMessageBroadcast(m);
         }

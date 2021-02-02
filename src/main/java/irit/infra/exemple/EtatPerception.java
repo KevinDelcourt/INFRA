@@ -31,7 +31,7 @@ public class EtatPerception implements State {
     @Override
     public void execute(LifeCycle c) {
 
-   ArrayList<Message> infraMessages = new ArrayList<>(this.agt.readMessages().stream().map(x -> (Message)x).collect(Collectors.toList()));
+   ArrayList<MonMessage> infraMessages = new ArrayList<>(this.agt.readMessages().stream().map(x -> (MonMessage)x).collect(Collectors.toList()));
         if (infraMessages !=null && infraMessages.size() !=0) System.out.println(name+ " a reçu "+infraMessages.get(0).toString());
         else System.out.println(name+" n'a pas reçu de message");
         System.out.println(name+ " : perception partage " +c.getSharedData("perception"));
